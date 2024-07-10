@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tensorFlow練習</title>
     <link rel="stylesheet" href="all.css">
 </head>
-<body>
-    <h1>使用TensorFlow預訓練模型進行物件偵測</h1>    
-    
-    <section id="demos" class="invisible">
 
-      <p>1.請準備想偵測辨識的物品，並將物品對準鏡頭。<br>2.準備好就可以按下「開啟鏡頭」。<br>3.請同意允許使用鏡頭。</p>
-      
-      <div id="liveView" class="camView">
-        <button id="webcamButton">開啟鏡頭</button>
-        <video id="webcam" autoplay muted width="640" height="480"></video>
-      </div>
+<body>
+    <h2>物件辨識-範例圖</h2>
+    <img src="img/apple.JPG" alt="demo">
+
+    <br>
+    <h1>使用TensorFlow預訓練模型進行物件偵測</h1>
+
+    <section id="demos" class="invisible">
+        <div class="step">
+            <ul>
+                <li>1.請準備想偵測辨識的物品，並將物品對準鏡頭。</li>
+                <li>2.準備好就可以按下「開啟鏡頭」。</li>
+                <li>3.請同意允許使用鏡頭。</li>
+            </ul>
+            <div id="liveView" class="camView">
+                <button id="webcamButton">開啟鏡頭</button>
+                <video id="webcam" autoplay muted width="640" height="480"></video>
+            </div>
+        </div>
+        
     </section>
+    
+    
 
     <!-- Import TensorFlow.js library -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
     <!-- Load the coco-ssd model to use to recognize things in images -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
-    
+
     <!-- Import the page's JavaScript to do some stuff -->
     <script src="script.js" defer></script>
 </body>
+
 </html>
